@@ -34,12 +34,6 @@ public class Repository {
 
                         questionArrayList.add(question);
 
-                        //Log.d( "onResponse: ",""+questionArrayList);
-
-
-                        //Log.i(String.valueOf(i), "onResponse: ");
-//                        Log.i("TAG", "onResponse: "+response.getJSONArray(i).getString(0));
-//                        Log.i("TAG", "onResponse: "+response.getJSONArray(i).getBoolean(1));
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -48,8 +42,7 @@ public class Repository {
                 if(callBack != null){
                     callBack.processFinished(questionArrayList);
                 }
-                //Log.d("TAG" , ""+response.toString());
-                //Log.i("TAG", "2");
+
             }
         }, new Response.ErrorListener() {
             @Override
